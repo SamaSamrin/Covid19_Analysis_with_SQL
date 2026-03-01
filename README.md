@@ -28,4 +28,10 @@ As expected, its worst mortality rate is much higher than Canada’s – 12.82% 
 
 <img width="975" height="639" alt="image" src="https://github.com/user-attachments/assets/9f4616b8-0a46-413c-9962-0453f755cf22" />
 
-Thankfully, it was around half of what it was in Canada – 11,000 daily deaths instead of 23,000. However, they both were around the same timeframe – April of 2021 – when possibly the second wave of Covid19 hit the world with its new variants. 
+Luckily, it was around half of what it was in Canada – 11,000 daily deaths instead of 23,000. However, they both were around the same timeframe – April of 2021 – when possibly the second wave of Covid19 hit the world with its new variants. 
+
+## Which countries suffered the most from high infection counts?
+
+<img width="1262" height="746" alt="image" src="https://github.com/user-attachments/assets/d1fed6e9-2fef-4c31-a70f-e99a486dd577" />
+
+As we can see here, first we had to ensure that the query is not regarding "World" or different continents to find the highest infection counts per country. After skipping them using the "NOT IN" clause, we found out that USA, India, and Brazil were the top three countries suffering from the highest infection counts. 
