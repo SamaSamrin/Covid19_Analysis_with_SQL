@@ -35,3 +35,10 @@ Luckily, it was around half of what it was in Canada – 11,000 daily deaths ins
 <img width="1262" height="746" alt="image" src="https://github.com/user-attachments/assets/d1fed6e9-2fef-4c31-a70f-e99a486dd577" />
 
 As we can see here, first we had to ensure that the query is not regarding "World" or different continents to find the highest infection counts per country. After skipping them using the "NOT IN" clause, we found out that USA, India, and Brazil were the top three countries suffering from the highest infection counts. 
+
+## Now, let's take a look at the mortality rate per continent
+
+<img width="1865" height="661" alt="image" src="https://github.com/user-attachments/assets/4650bcb7-cacf-424b-b4e3-1a8616e1dd86" />
+
+Here we first transformed each column into the right numerical category (instead of String) to have a proper calculation. Specifically, we converted the columns into FLOAT because otherwise the death percentage would be less than 0.001 and result in a complete 0. 
+After the appropriate calculation, we can see from the reuslt, that South America and North America suffered the most from mortality rate, based on their populations. To find this, we compared their maximum death count to their maximum recorded population from our dataset.
