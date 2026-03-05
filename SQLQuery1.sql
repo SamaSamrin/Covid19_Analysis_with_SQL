@@ -118,3 +118,24 @@ WHERE continent IS NOT NULL AND total_deaths IS NOT NULL
 GROUP BY continent
 ORDER BY death_percentage DESC
 --here we changed the numbers to FLOAT for the percentage calculation, because they're very minuscule (less than 0.001)
+
+
+SELECT *
+FROM covid19alex..CovidDeaths AS deaths
+JOIN covid19alex..CovidVaccinations AS vaccines
+ON deaths.location = vaccines.location AND deaths.date = vaccines.date
+
+--deaths.iso_code, deaths.continent, deaths.location, deaths.date, deaths.population, deaths.total_cases, deaths.total_deaths, 
+--	vaccines.extreme_poverty, vaccines.life_expectancy, vaccines.total_vaccinations
+
+
+--Now, let's focus on certain columns only--
+SELECT 
+	deaths.iso_code, deaths.location, deaths.date, 
+	deaths.new_cases, deaths.total_cases,
+	vacc.new_tests, vacc.total_tests, vacc.new_vaccinations, vacc.total_vaccinations
+FROM covid19alex..CovidDeaths AS deaths
+JOIN covid19alex..CovidVaccinations AS vacc
+ON deaths.date = vacc.date AND deaths.location = vacc.location
+--WHERE vacc.total_tests IS NOT NULL
+ORDER BY deaths.location, deaths.date
